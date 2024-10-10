@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 
-const RecipeSearch = () => {
+const Search = () => {
   const [prompt, setPrompt] = useState('');
   const [ans, setAns] = useState('');
 
@@ -28,7 +28,7 @@ const RecipeSearch = () => {
   };
   return (
     <div>
-      recipe search
+      search
       <div>
         <input value={prompt} type="text" onChange={(e) => setPrompt(e.target.value)} placeholder="Enter a prompt lol.." />
         <div onClick={handleGenerate}>click!</div>
@@ -39,4 +39,4 @@ const RecipeSearch = () => {
   )
 }
 
-export default RecipeSearch
+export default Search
