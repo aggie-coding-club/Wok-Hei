@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react'
+import Brownies from "@/components/Brownies";
 
 const Search = () => {
   const [prompt, setPrompt] = useState('');
@@ -32,9 +33,70 @@ const Search = () => {
         <div className='mr-auto text-3xl font-semibold'>Search</div>
         <img onClick={handleGenerate} src="https://www.svgrepo.com/show/522266/search.svg" className='h-6 self-center cursor-pointer transition-transform transform hover:scale-110'/>
         <input value={prompt} type="text" className="border rounded-full p-1 pl-3" onChange={(e) => setPrompt(e.target.value)} placeholder="Enter a prompt lol.."/>
-      </div>
-      
+      </div>      
       <div>{ans}</div>
+      <div className='grid grid-cols-3 gap-4 place-items-center'>
+        <Brownies 
+          name='Brownies' 
+          link='' 
+          cal={290}
+          ingredient={['flour, eggs, choco, dog']}
+          protein={10}
+          carb={20}
+          fat={0}
+          expanded={false}
+        ></Brownies>
+        <Brownies 
+          name='Brownies' 
+          link='' 
+          cal={290}
+          ingredient={['flour, eggs, choco, dog']}
+          protein={10}
+          carb={20}
+          fat={0}
+          expanded={false}
+        ></Brownies>
+        <Brownies 
+          name='Brownies' 
+          link='' 
+          cal={290}
+          ingredient={['flour, eggs, choco, dog']}
+          protein={10}
+          carb={20}
+          fat={0}
+          expanded={false}
+        ></Brownies>
+        <Brownies 
+          name='Brownies' 
+          link='' 
+          cal={290}
+          ingredient={['flour, eggs, choco, dog']}
+          protein={10}
+          carb={20}
+          fat={0}
+          expanded={false}
+        ></Brownies>
+        <Brownies 
+          name='Brownies' 
+          link='' 
+          cal={290}
+          ingredient={['flour, eggs, choco, dog']}
+          protein={10}
+          carb={20}
+          fat={0}
+          expanded={false}
+        ></Brownies>
+        <Brownies 
+          name='Brownies' 
+          link='' 
+          cal={290}
+          ingredient={['flour, eggs, choco, dog']}
+          protein={10}
+          carb={20}
+          fat={0}
+          expanded={false}
+        ></Brownies>
+      </div>
     </div>
   )
 }
