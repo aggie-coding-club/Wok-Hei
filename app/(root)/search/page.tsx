@@ -40,7 +40,7 @@ const Search = () => {
           name='Brownies' 
           link='' 
           cal={290}
-          ingredient={['flour, eggs, choco, dog']}
+          ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
           carb={20}
           fat={0}
@@ -50,7 +50,7 @@ const Search = () => {
           name='Brownies' 
           link='' 
           cal={290}
-          ingredient={['flour, eggs, choco, dog']}
+          ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
           carb={20}
           fat={0}
@@ -60,7 +60,7 @@ const Search = () => {
           name='Brownies' 
           link='' 
           cal={290}
-          ingredient={['flour, eggs, choco, dog']}
+          ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
           carb={20}
           fat={0}
@@ -70,7 +70,7 @@ const Search = () => {
           name='Brownies' 
           link='' 
           cal={290}
-          ingredient={['flour, eggs, choco, dog']}
+          ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
           carb={20}
           fat={0}
@@ -80,7 +80,7 @@ const Search = () => {
           name='Brownies' 
           link='' 
           cal={290}
-          ingredient={['flour, eggs, choco, dog']}
+          ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
           carb={20}
           fat={0}
@@ -90,7 +90,7 @@ const Search = () => {
           name='Brownies' 
           link='' 
           cal={290}
-          ingredient={['flour, eggs, choco, dog']}
+          ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
           carb={20}
           fat={0}
