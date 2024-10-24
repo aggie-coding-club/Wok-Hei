@@ -1,24 +1,22 @@
 import React from "react";
 
-// Friend interface for typing props
 interface Friend {
   name: string;
   recipe: string;
   rating: string;
 }
 
-// Props interface for the FriendList component
 interface FriendListProps {
   friends: Friend[];
 }
 
 const FriendList = ({ friends }: FriendListProps) => {
   return (
-    <div className="p-4 float-right">
+    <div className="p-4 float-right bg-[#f0fdf4] border rounded-[10px]">
       <h1 className="text-xl font-bold mb-4 text-center">Friends</h1>
       <ul>
         {friends.map((friend, index) => (
-          <li key={index} className="mb-4 p-4 border rounded-[10px] shadow-sm">
+          <li key={index} className="mb-4 p-4 border rounded-[10px] shadow-sm bg-white">
             <h3 className="text-lg font-semibold">{friend.name}</h3>
             <p>Most recent recipe: {friend.recipe}</p>
             <p>Recipe rating: {friend.rating}</p>
@@ -29,7 +27,6 @@ const FriendList = ({ friends }: FriendListProps) => {
   );
 };
 
-// Example usage of the FriendList component
 const friendsData = [
   {
     name: "Alice",
