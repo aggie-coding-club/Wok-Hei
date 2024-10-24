@@ -15,6 +15,37 @@ declare type UpdateUserParams = {
   photo: string;
 };
 
+declare type CreateRecipeParams = {
+  clerkId: string;
+  author: string;
+  name: string;
+  instructions: string;
+  ingredients: string[];
+  calories: number;
+  fat: number;
+  protein: number;
+  carbs: number;
+  servings: number;
+  time: number;
+  rating: number;
+  picture: string;
+};
+
+declare type UpdateRecipeParams = {
+  author: string;
+  name: string;
+  instructions: string;
+  ingredients: string[];
+  calories: number;
+  fat: number;
+  protein: number;
+  carbs: number;
+  servings: number;
+  time: number;
+  rating: number;
+  picture: string;
+};
+
 // examples
 // declare type CreateTaskParams = {
 //   taskId: string,
