@@ -1,10 +1,11 @@
 
+import Friends from '@/components/Friends'
 import React from 'react'
 
 const Home = () => {
   return (
     <div>
-      hey guy
+      <Friends/>
     </div>
   )
 }
