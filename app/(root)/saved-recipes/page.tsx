@@ -8,7 +8,9 @@ const SavedRecipes = () => {
   return (
     <div className="">
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl px-3">Saved Recipes</h2>
+        <h2 className="text-2xl px-3 border-slate-200 border-b-2 py-3">
+          Saved Recipes
+        </h2>
         <div>
           <Dropdown options={sortOptions} />
         </div>
