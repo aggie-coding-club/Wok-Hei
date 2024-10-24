@@ -121,6 +121,13 @@ const SavedRecipes = () => {
           </div>
         </div>
       </div>
+      <div>
+        <a href="/search">
+          <button className="fixed bottom-16 right-16 py-5 rounded-full bg-green-200 text-green-800 font-bold px-10">
+            Add Recipes
+          </button>
+        </a>
+      </div>
     </div>
   );
 };
