@@ -38,7 +38,9 @@ const Search = () => {
       <div className='grid grid-cols-3 gap-4 place-items-center'>
         <Brownies 
           name='Brownies' 
-          link='' 
+          link='https://kitchen335co.com/wp-content/uploads/2023/03/fudgy-brownies-blog-1-of-2.jpg'
+          color='bg-amber-900' 
+          hover='hover:bg-amber-900'
           cal={290}
           ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
@@ -48,7 +50,9 @@ const Search = () => {
         ></Brownies>
         <Brownies 
           name='Brownies' 
-          link='' 
+          link='https://kitchen335co.com/wp-content/uploads/2023/03/fudgy-brownies-blog-1-of-2.jpg'
+          color='bg-amber-900' 
+          hover='hover:bg-amber-900'
           cal={290}
           ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
@@ -58,7 +62,9 @@ const Search = () => {
         ></Brownies>
         <Brownies 
           name='Brownies' 
-          link='' 
+          link='https://kitchen335co.com/wp-content/uploads/2023/03/fudgy-brownies-blog-1-of-2.jpg'
+          color='bg-amber-900' 
+          hover='hover:bg-amber-900'
           cal={290}
           ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
@@ -68,7 +74,9 @@ const Search = () => {
         ></Brownies>
         <Brownies 
           name='Brownies' 
-          link='' 
+          link='https://kitchen335co.com/wp-content/uploads/2023/03/fudgy-brownies-blog-1-of-2.jpg'
+          color='bg-amber-900' 
+          hover='hover:bg-amber-900'
           cal={290}
           ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
@@ -78,7 +86,9 @@ const Search = () => {
         ></Brownies>
         <Brownies 
           name='Brownies' 
-          link='' 
+          link='https://kitchen335co.com/wp-content/uploads/2023/03/fudgy-brownies-blog-1-of-2.jpg'
+          color='bg-amber-900' 
+          hover='hover:bg-amber-900'
           cal={290}
           ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
@@ -88,7 +98,9 @@ const Search = () => {
         ></Brownies>
         <Brownies 
           name='Brownies' 
-          link='' 
+          link='https://www.washingtonpost.com/resizer/R6HrS-hkVTLgVqrZdnP5354l1XE=/arc-anglerfish-washpost-prod-washpost/public/VAAKMD4TGKOT5HF4I74MI5LXMI.jpg'
+          color='bg-amber-700' 
+          hover='hover:bg-amber-700'
           cal={290}
           ingredient={['flour', 'eggs', 'choco', 'chip', 'dog']}
           protein={10}
