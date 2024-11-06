@@ -12,13 +12,6 @@ interface BronnyProps {
   }
 
 const Brownies = ({name, link, color, hover, cal, ingredient, protein, carb, fat, expanded}: BronnyProps) => {
-    const hexToRgba = (hex: string, opacity: number) => {
-        let r = parseInt(hex.substring(1, 3), 16);
-        let g = parseInt(hex.substring(3, 5), 16);
-        let b = parseInt(hex.substring(5, 7), 16);
-        return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-      }
-
     return(
         <div className={`mt-[30px] ${color} bg-opacity-45 p-2 flex flex-col items-center rounded-[50px] relative group`} >
             <div className={`w-[94%] max-mb-0 flex items-center justify-center overflow-hidden max-h-0 group-hover:mb-2 group-hover:max-h-full transition-all duration-300 ${hover} hover:bg-opacity-45 cursor-pointer rounded-[15px]`} style={{borderTopLeftRadius: '65px 42px', borderTopRightRadius: '65px 42px'}}>
