@@ -7,7 +7,7 @@ const Search = () => {
   const [prompt, setPrompt] = useState('');
   const [ans, setAns] = useState('');
   const [isOpen, setIsOpen] = useState(false)
-  const [currentRecipe, setCurrentRecipe] = useState<[string[], string[]]>([[''], ['']]);
+  const [currentRecipe, setCurrentRecipe] = useState<[string[], string[], string]>([[''], [''], '']);
 
   const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
@@ -42,7 +42,7 @@ const Search = () => {
       'hover:bg-amber-900',
       290,
       ['flour', 'eggs', 'choco', 'chip', 'dog'],
-      ['take the dog behind the house', 'shoot the dog', 'gut the dog', 'skin the dog', 'preheat oven to 350 degrees farenheit'],
+      ['take the dog behind the house', 'put lead in the dog', 'take intestines out', 'skin Skippy', 'preheat oven to 350 degrees farenheit'],
       10,
       20,
       0,
@@ -54,7 +54,7 @@ const Search = () => {
       'hover:bg-amber-900',
       290,
       ['flour', 'eggs', 'choco', 'chip', 'dog'],
-      ['take the dog behind the house', 'shoot the dog', 'gut the dog', 'skin the dog', 'preheat oven to 350 degrees farenheit'],
+      ['take the dog behind the house', 'put lead in the dog', 'take intestines out', 'skin Skippy', 'preheat oven to 350 degrees farenheit'],
       10,
       20,
       0,
@@ -66,7 +66,7 @@ const Search = () => {
       'hover:bg-amber-900',
       290,
       ['flour', 'eggs', 'choco', 'chip', 'dog'],
-      ['take the dog behind the house', 'shoot the dog', 'gut the dog', 'skin the dog', 'preheat oven to 350 degrees farenheit'],
+      ['take the dog behind the house', 'put lead in the dog', 'take intestines out', 'skin Skippy', 'preheat oven to 350 degrees farenheit'],
       10,
       20,
       0,
@@ -78,7 +78,7 @@ const Search = () => {
       'hover:bg-amber-900',
       290,
       ['flour', 'eggs', 'choco', 'chip', 'dog'],
-      ['take the dog behind the house', 'shoot the dog', 'gut the dog', 'skin the dog', 'preheat oven to 350 degrees farenheit'],
+      ['take the dog behind the house', 'put lead in the dog', 'take intestines out', 'skin Skippy', 'preheat oven to 350 degrees farenheit'],
       10,
       20,
       0,
@@ -90,7 +90,7 @@ const Search = () => {
       'hover:bg-amber-900',
       290,
       ['flour', 'eggs', 'choco', 'chip', 'dog'],
-      ['take the dog behind the house', 'shoot the dog', 'gut the dog', 'skin the dog', 'preheat oven to 350 degrees farenheit'],
+      ['take the dog behind the house', 'put lead in the dog', 'take intestines out', 'skin Skippy', 'preheat oven to 350 degrees farenheit'],
       10,
       20,
       0,
@@ -101,8 +101,8 @@ const Search = () => {
       'bg-amber-700' ,
       'hover:bg-amber-700',
       290,
-      ['flour', 'eggs', 'choco', 'chip', 'dog'],
-      ['take the dog behind the house', 'shoot the dog', 'gut the dog', 'skin the dog', 'preheat oven to 350 degrees farenheit'],
+      ['flour', 'eggs', 'nutmeg', 'cinnamon', 'dog'],
+      ['take the dog behind the house', 'put lead in the dog', 'take intestines out', 'skin Skippy', 'preheat oven to 350 degrees farenheit'],
       10,
       20,
       0,
@@ -225,10 +225,28 @@ const Search = () => {
 
     {isOpen && (
         <>
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
-            onClick={closeModal}
-          ></div>
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex justify-center items-center" onClick={closeModal}>
+            <div className='bg-white rounded-[50px] overflow-hidden'>
+              <div className={`h-[500px] w-[500px] p-[40px] ${currentRecipe[2]} bg-opacity-85 text-white flex flex-col gap-2`}>
+                <div>
+                  <div className="text-3xl font-bold mb-[5px]">Ingredients</div>
+                  <ul className='list-disc font-bold ml-[15px]'>
+                    {currentRecipe[0].map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold mb-[5px]">Instructions</div>
+                  <ol className='list-decimal font-bold ml-[19px]'>
+                    {currentRecipe[1].map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>          
         </>
       )}
     </>

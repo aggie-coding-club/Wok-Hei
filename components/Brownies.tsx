@@ -11,14 +11,22 @@ interface BronnyProps {
     fat: number,
     id: string,
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>,
-    setCurrentRecipe: React.Dispatch<React.SetStateAction<[string[], string[]]>>,
+    setCurrentRecipe: React.Dispatch<React.SetStateAction<[string[], string[], string]>>,
   }
 
 const Brownies = ({name, link, color, hover, cal, ingredient, instructions, protein, carb, fat, id, setIsOpen, setCurrentRecipe}: BronnyProps) => {
     const updateRecipe = () => {
-        setCurrentRecipe([['flour', 'sugar'], ['butter', 'eggs']]);
-      };
-    
+        setCurrentRecipe([ingredient, instructions, color]);
+    };    
+    const openRecipe = () => {
+        setIsOpen(true)
+    }  
+
+    const openModal = () => {
+        updateRecipe()
+        openRecipe()
+    }
+
     return(
         <div key={id} className={`mt-[30px] ${color} bg-opacity-45 p-2 flex flex-col items-center rounded-[50px] relative group`} >
             <div className={`w-[94%] max-mb-0 flex items-center justify-center overflow-hidden max-h-0 group-hover:mb-2 group-hover:max-h-full transition-all duration-300 ${hover} hover:bg-opacity-45 cursor-pointer rounded-[15px]`} style={{borderTopLeftRadius: '65px 42px', borderTopRightRadius: '65px 42px'}}>
@@ -32,8 +40,8 @@ const Brownies = ({name, link, color, hover, cal, ingredient, instructions, prot
                     <div className="p-0 m-0 text-white font-extrabold text-[28px] leading-none">{cal}</div>
                     <div className="p-0 m-0 text-white font-extrabold text-[15px] leading-none">kcal</div>
                 </div>
-                <div className={`p-2 flex justify-center items-center overflow-hidden ${color} bg-opacity-45 rounded-[30px] cursor-pointer`}>
-                    <ul className="list-disc m-0 p-0 text-white font-bold text-[13px]">
+                <div onClick={openModal} className={`p-2 flex justify-center items-center overflow-hidden ${color} bg-opacity-45 rounded-[30px] cursor-pointer`}>
+                    <ul className="list-disc m-0 p-0 text-white font-bold text-[13px] ml-[15px]">
                         {ingredient.map((item) => (
                         <li className="">{item}</li>
                         ))}
