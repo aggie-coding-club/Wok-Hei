@@ -4,7 +4,6 @@ const RecipeSchema = new Schema({
   clerkId: {
     type: String,
     required: true,
-    unique: true,
   },
   author: {
     type: String,
