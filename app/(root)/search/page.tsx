@@ -123,14 +123,14 @@ const Search = () => {
 
   return (
     <>
-    <div className='search-main h-screen'>
+    <div className='search-main h-screen flex flex-col items-center'>
       <div className='w-full bg-slate-100 p-8 flex justify-end align-middle gap-2.5'>
         <div className='mr-auto text-3xl font-semibold'>Search</div>
         <img onClick={handleGenerate} src="https://www.svgrepo.com/show/522266/search.svg" className='h-6 self-center cursor-pointer transition-transform transform hover:scale-110'/>
         <input value={prompt} type="text" className="border rounded-full p-1 pl-3" onChange={(e) => setPrompt(e.target.value)} placeholder="Enter a prompt lol.."/>
       </div>      
       <div>{ans}</div>
-      <div className='grid grid-cols-3 gap-4 place-items-center'>
+      <div className='mt-5 flex flex-wrap gap-5 self-center'>
         {/* <Brownies 
           name='Brownies' 
           link='https://kitchen335co.com/wp-content/uploads/2023/03/fudgy-brownies-blog-1-of-2.jpg'
