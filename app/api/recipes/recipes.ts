@@ -3,6 +3,7 @@ import { createRecipe } from "@/lib/actions/recipe.actions";
 import { getUserById } from "@/lib/actions/user.actions";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+// import { v4 } from "uuid";
 
 
 export async function checkUser() {
@@ -18,7 +19,6 @@ export async function sendRecipe(name: string, instructions: string, ingredients
     const user = await getUserById(userId);
     const username = user?.username;
     const recipe = await {
-      recipeId: String(Date.now()),
       clerkId: userId,
       author: username,
       name: name,

@@ -1,10 +1,9 @@
 import { Schema, model, models } from "mongoose";
 
 const RecipeSchema = new Schema({
-  recipeId: {
+  clerkId: {
     type: String,
     required: true,
-    unique: true,
   },
   author: {
     type: String,
