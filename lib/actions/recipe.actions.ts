@@ -30,8 +30,9 @@ export async function getRecipe(name: string) {
   }
 }
 
-export async function getAllRecipes() {
+export async function getAllRecipes(name:string) {
   try {
+    await connectToDatabase();
     const courses = await Recipe.find();
     
     return JSON.parse(JSON.stringify(courses));

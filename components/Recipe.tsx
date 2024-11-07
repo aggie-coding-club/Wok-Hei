@@ -14,7 +14,6 @@ interface recipeStats {
 
 const Recipe = ({
   name,
-  link,
   cooktime,
   cal,
   ingredient,

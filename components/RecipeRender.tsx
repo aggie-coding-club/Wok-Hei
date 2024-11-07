@@ -1,12 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Recipe from "@/components/Recipe";
-import Dropdown from "@/components/Dropdown";
 import { Button } from "@/components/ui/button";
 import Modal from "@/components/Modal";
-const sortOptions = ["Calories", "Cook Time", "Ingredients"];
 
-const RecipeRender = ({recipes} : {recipes:any}) => {
+const RecipeRender = ({recipes} : {recipes:any}) => { //eslint-disable-line @typescript-eslint/no-explicit-any
   const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = (e:any) => { //eslint-disable-line @typescript-eslint/no-explicit-any
@@ -16,13 +14,8 @@ const RecipeRender = ({recipes} : {recipes:any}) => {
   return (
     <div className="">
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl px-3 border-slate-200 border-b-2 py-3">
-          Saved Recipes
-        </h2>
-        <div>
-          <Dropdown options={sortOptions} />
-        </div>
         {/* {console.log(recipes)} */}
+        <div className="flex flex-wrap gap-3">
         {recipes && recipes.map((recipe : any) => ( //eslint-disable-line @typescript-eslint/no-explicit-any
         // onSubmit={(event) => handleSubmit(event, task._id)}
         <Recipe
@@ -38,6 +31,7 @@ const RecipeRender = ({recipes} : {recipes:any}) => {
               expanded={false}
             />
       ))}
+      </div>
         {/* <div className="flex flex-row gap-10 mx-10">
           <div className="basis-1/4">
             <Recipe

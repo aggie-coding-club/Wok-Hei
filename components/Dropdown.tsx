@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -6,7 +7,7 @@ interface DropdownListProps {
   options: string[]; // Array of options passed from the parent component
 }
 
-function DropdownList({ options }: DropdownListProps) {
+const DropdownList = ({ options }: DropdownListProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(options[0]); // Set initial value to the first option
 
