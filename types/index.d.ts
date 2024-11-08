@@ -32,6 +32,7 @@ declare type CreateRecipeParams = {
 };
 
 declare type UpdateRecipeParams = {
+  clerkId: string;
   author: string;
   name: string;
   instructions: string;
