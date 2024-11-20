@@ -3,19 +3,6 @@ import React from 'react';
 const PlanningPage: React.FC = () => {
   return (
     <div className="flex">
-      {/* Sidebar */}
-      <div className="w-1/5 p-4 bg-gray-100">
-        <div className="mb-4">
-        
-        </div>
-        <ul>
-          <li>Dashboard</li>
-          <li>Saved Recipes</li>
-          <li>Planning</li>
-          <li>Pantry</li>
-          <li>Search</li>
-        </ul>
-      </div>
 
       {/* Main Content */}
       <div className="flex-1 p-8">
