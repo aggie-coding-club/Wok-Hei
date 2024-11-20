@@ -1,9 +1,7 @@
 export default class foodItemClass {
-    constructor(name, link, color, hover, cal, ingredients, instructions, protein, carb, fat) {
+    constructor(name, link, cal, ingredients, instructions, protein, carb, fat) {
         this.name = name;
         this.link = link;  
-        this.color = color;
-        this.hover = hover;
         this.cal = cal;
         this.ingredients = ingredients;
         this.instructions = instructions;
