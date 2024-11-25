@@ -7,7 +7,7 @@ const model = genAI.getGenerativeModel({
 const prompt = `Attached is an image of someone's food or ingredients in a pantry. Go over the image and list all ingredients and identify all of the food they have. Do not include extra text
 ## Summary: `;
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
     const { base64 } = await req.json();
     const filePart = fileToGenerativePart(base64)
 

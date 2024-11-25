@@ -14,7 +14,7 @@ const model = google('gemini-1.5-pro-latest',
 )
 const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY! });
 
-export async function POST(req:Request,res:Response) {
+export async function POST(req:Request) {
   const reqBody = await req.json()
   console.log(reqBody);
   const messages: Message[] = reqBody.messages;
@@ -26,22 +26,23 @@ export async function POST(req:Request,res:Response) {
   const retrievals = await queryPineconeVectorStore(pc, 'wokehi', 'foods', searchQuery)
 
   // finally prompt to the gemini api
-  const finalPrompt = `Here are the ingredients in a user's pantry, and a user query. Go through and 
-  enrich your knowledge by going through ingredient knowledgebase. If the user asks what they can make, do NOT include recipes that are not close enough. Go through each recipe's needed ingredients,
-  and put a green check emoji if the user has the ingredient in the pantry, and a red x if the user does not. 
-  \n\n**Provided pantry** \n ${reportData}.
-  \n **end of provided pantry**
-  
-  \n\n**User Query:**\n${userQuestion}?
-  \n**end of user query**
+  // finally prompt to the gemini api
+const finalPrompt = `Here are the ingredients in a user's pantry, and a user query. Go through and 
+enrich your knowledge by going through the ingredient knowledgebase. If the user asks what they can make, do NOT include recipes that are not close enough. Go through each recipe's needed ingredients,
+and put a green check emoji if the user has the ingredient in the pantry, and a red x if the user does not. Note: this is ONLY if they ask what they can make, answer any question they give if otherwise.
+\n\n**Provided pantry** \n ${reportData}.
+\n **end of provided pantry**
 
-  \n\n**Generic findings:**
-  \n\n${retrievals}.
-  \n\n**end of generic findings**
+\n\n**User Query:**\n${userQuestion}?
+\n**end of user query**
 
-  \n\nProvide thorough justification for answer.
-  \n\n**Answer:**
-  `;
+\n\n**Generic findings:**
+\n\n${retrievals}.
+\n\n**end of generic findings**
+
+\n\nProvide thorough justification for answer.
+\n\n**Answer:**
+`;
 
 
   // stream resopnse from gemini

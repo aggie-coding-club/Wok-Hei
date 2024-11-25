@@ -63,7 +63,7 @@ const Brownies = ({name, link, cal, ingredient, instructions, protein, carb, fat
                 <div onClick={openModal} className={`p-2 flex justify-center items-center overflow-hidden ${color} bg-opacity-45 rounded-[30px] cursor-pointer hover:scale-105`}>
                     <ul className="list-disc m-0 p-0 text-white font-bold text-[13px] ml-[15px]">
                         {ingredient.slice(0,5).map((item) => (
-                        <li className="">{item}</li>
+                        <li className="" key={item}>{item}</li>
                         ))}
                     </ul>
                 </div>
