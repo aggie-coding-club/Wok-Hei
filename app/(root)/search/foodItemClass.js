@@ -1,5 +1,6 @@
+
 export default class foodItemClass {
-    constructor(name, link, cal, ingredients, instructions, protein, carb, fat) {
+    constructor(name, link, cal, ingredients, instructions, protein, carb, fat,id) {
         this.name = name;
         this.link = link;  
         this.cal = cal;
@@ -8,7 +9,7 @@ export default class foodItemClass {
         this.protein = protein;
         this.carb = carb;
         this.fat = fat;
-        this.id = self.crypto.randomUUID()
+        this.id = id;
     }
 
     setProperty(propertyName, value) {

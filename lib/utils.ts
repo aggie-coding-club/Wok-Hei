@@ -43,7 +43,8 @@ export async function queryPineconeVectorStore(
   const index = client.Index(indexName);
   const queryResponse = await index.namespace(namespace).query({
     topK: 5,
-    vector: queryEmbedding as any,
+    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
+    vector: queryEmbedding as any, 
     includeMetadata: true,
     includeValues: false
   })

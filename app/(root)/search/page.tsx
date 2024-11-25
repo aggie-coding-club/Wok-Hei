@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Brownies from "@/components/Brownies";
 import foodItemClass from './foodItemClass.js'
+import Image from 'next/image.js';
 
 const Search = () => {
   const [prompt, setPrompt] = useState('');
@@ -33,7 +34,7 @@ const Search = () => {
     }
   };
 
-  let foodItemsList = [
+  const foodItemsList = [
     new foodItemClass(
       'Brownies', 
       'https://kitchen335co.com/wp-content/uploads/2023/03/fudgy-brownies-blog-1-of-2.jpg',
@@ -43,6 +44,7 @@ const Search = () => {
       10,
       20,
       0,
+      1
     ),
     new foodItemClass(
       'Brownies', 
@@ -53,6 +55,7 @@ const Search = () => {
       10,
       20,
       0,
+      2
     ),
     new foodItemClass(
       'Brownies', 
@@ -63,6 +66,7 @@ const Search = () => {
       10,
       20,
       0,
+      3
     ),
     new foodItemClass(
       'Brownies', 
@@ -73,6 +77,7 @@ const Search = () => {
       10,
       20,
       0,
+      4
     ),
     new foodItemClass(
       'Papaya', 
@@ -83,6 +88,7 @@ const Search = () => {
       10,
       20,
       0,
+      5
     ),
     new foodItemClass(
       'Pumpkins', 
@@ -93,6 +99,7 @@ const Search = () => {
       10,
       20,
       0,
+      6
     ),
     new foodItemClass(
       'Brownies', 
@@ -103,6 +110,7 @@ const Search = () => {
       10,
       20,
       0,
+      7
     ),
     new foodItemClass(
       'Pumpkins', 
@@ -113,6 +121,7 @@ const Search = () => {
       10,
       20,
       0,
+      8
     ),
   ]
 
@@ -121,13 +130,14 @@ const Search = () => {
     <div className='search-main h-screen flex flex-col items-center'>
       <div className='w-full bg-slate-100 p-8 flex justify-end align-middle gap-2.5'>
         <div className='mr-auto text-3xl font-semibold'>Search</div>
-        <img onClick={handleGenerate} src="https://www.svgrepo.com/show/522266/search.svg" className='h-6 self-center cursor-pointer transition-transform transform hover:scale-110'/>
+        <Image onClick={handleGenerate} src="https://www.svgrepo.com/show/522266/search.svg" className='h-6 self-center cursor-pointer transition-transform transform hover:scale-110' alt='hi' width={54} height={54}/>
         <input value={prompt} type="text" className="border rounded-full p-1 pl-3" onChange={(e) => setPrompt(e.target.value)} placeholder="Enter a prompt lol.."/>
       </div>      
       <div>{ans}</div>
       <div className='mt-4 grid lg:grid-cols-3 2xl:grid-cols-5 xl:grid-cols-4 grid-cols-2 gap-4 place-items-center'>
         {foodItemsList.map((item) => (
           <Brownies
+            key = {item.id}
             name = {item.name}
             link = {item.link}
             cal = {item.cal}
@@ -153,7 +163,7 @@ const Search = () => {
                   <div className="text-3xl font-bold mb-[5px]">Ingredients</div>
                   <ul className='list-disc font-bold ml-[15px]'>
                     {currentRecipe[0].map((item) => (
-                      <li>{item}</li>
+                      <li key={item}>{item}</li>
                     ))}
                   </ul>
                 </div>
@@ -161,7 +171,7 @@ const Search = () => {
                   <div className="text-3xl font-bold mb-[5px]">Instructions</div>
                   <ol className='list-decimal font-bold ml-[19px]'>
                     {currentRecipe[1].map((item) => (
-                      <li>{item}</li>
+                      <li key={item}>{item}</li>
                     ))}
                   </ol>
                 </div>

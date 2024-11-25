@@ -153,7 +153,7 @@ const ReportComponent = ({onReportConfirmation}:Props) => {
             setReportData(e.target.value);
           }}
         />
-        <Button variant={'destructive'} className='bg-[#D90013]' onClick={()=>{
+        <Button className='bg-green-600' onClick={()=>{
           onReportConfirmation(reportData)
         }}>2. Looks Good</Button>
       </fieldset>

@@ -17,10 +17,10 @@ const Recipe = ({
   cooktime,
   cal,
   ingredient,
-  protein,
+  // protein,
   carb,
-  fat,
-  expanded,
+  // fat,
+  // expanded,
 }: recipeStats) => {
   return (
     <div className="bg-slate-300 h-96 rounded-xl">
