@@ -6,7 +6,7 @@ import React from 'react'
 const sortOptions = ["Calories", "Cook Time", "Ingredients"];
 
 const SavedRecipes = async () => {
-  const recipes = await getAllRecipes("Calories");
+  const recipes = await getAllRecipes();
   return (
     <div>
       <h2 className="text-2xl px-3 border-slate-200 border-b-2 py-3">
