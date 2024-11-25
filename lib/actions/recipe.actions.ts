@@ -30,7 +30,7 @@ export async function getRecipe(name: string) {
   }
 }
 
-export async function getAllRecipes(name:string) {
+export async function getAllRecipes() {
   try {
     await connectToDatabase();
     const courses = await Recipe.find();
